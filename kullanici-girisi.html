@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kullanıcı Giriş</title>
+    <link rel="stylesheet" href="css/kullanici-giris.css">
+</head>
+
+<body>
+    <forfm class="signup-form" action="/kullanici-girise" method="post">
+
+        <div class="form-header">
+            <h1>Kullanıcı Oluşturma</h1>
+        </div>
+
+        <div class="form-body">
+
+            <div class="name-group">n
+                <div class="form-group left">
+                    <label for="isim" class="label-title">İsim*</label>
+                    <input type="text" id="firstname" class="form-input" placeholder="İsim Girin" required="required" />
+                </div>
+                <div class="form-group right">
+                    <label for="soyisim" class="label-title">Soy İsim</label>
+                    <input type="text" id="lastname" class="form-input" placeholder="Soy İsim Girin" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="label-title">Email*</label>
+                <input type="email" id="email" class="form-input" placeholder="Email Girin" required="required">
+            </div>
+
+            <div class="name-group">
+                <div class="form-group left">
+                    <label for="password" class="label-title">Şifre *</label>
+                    <input type="password" id="password" class="form-input" placeholder="Şifre Girin" required="required">
+                </div>
+                <div class="form-group right">
+                    <label for="tekrar-sifre" class="label-title">Tekrar Şifre Girin</label>
+                    <input type="password" class="form-input" id="confirm-password" placeholder="Tekrar Şifre Girin" required="required">
+                </div>
+            </div>
+
+            <div class="name-group">
+                <div class="form-group left">
+                    <label class="label-title">Cinsiyet:</label>
+                    <div class="input-group">
+                        <label for="erkek"><input type="radio" name="gender" value="male" id="male"> Erkek</label>
+                        <label for="kadın"><input type="radio" name="gender" value="female" id="female">Kadın</label>
+                    </div>
+                </div>
+                <div class="form-group right">
+                    <label class="label-title">Hobiler</label>
+                    <div>
+                        <label><input type="checkbox" >Kod Yazmak</label>
+                        <label><input type="checkbox" >Fitness</label>
+                        <label><input type="checkbox" >Top Oynamak</label>
+                        <label><input type="checkbox" >Kitap Okumak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="name-group">
+                <div class="form-group left">
+                    <label class="label-title">Gelir Durumu</label>
+                    <select class="form-input" id="level">
+              <option >Kötü</option>
+              <option >Orta</option>
+              <option >İyi</option>
+              <option >Çok İyi</option>
+
+            </select>
+                </div>
+                <div class="form-group right">
+                    <label for="experience" class="label-title">Aylık Gelir</label>
+                    <input type="range" min="0" max="20000" step="10" value="0" id="experience" class="form-input" onChange="change();" style="height:28px;width:78%;padding:0;">
+                    <span id="range-label">0</span>
+                </div>
+            </div>
+
+            <div class="name-group">
+                <div class="form-group left">
+                    <label for="choose-file" class="label-title">Fotoğraf Yükleyin</label>
+                    <input type="file" id="choose-file" size="80">
+                </div>
+                <div class="form-group right">
+                    <label for="experience" class="label-title">Age</label>
+                    <input type="number" min="18" max="80" value="18" class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="choose-file" class="label-title">Özet</label>
+                <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <button type="submit" class="btn">Oluştur</button>
+        </div>
+
+        </form>
+
+        <script>
+            var rangeLabel = document.getElementById("range-label");
+            var experience = document.getElementById("experience");
+
+            function change() {
+                rangeLabel.innerText = experience.value + "  TL";
+            }
+        </script>
+
+</body>

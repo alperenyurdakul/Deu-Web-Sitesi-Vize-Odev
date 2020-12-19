@@ -1,0 +1,56 @@
+                    table {
+                        height: 200px;
+                        width: 100%;
+                        overflow-x: auto
+                    }
+                    
+                    th {
+                        background: #333;
+                        color: white;
+                        font-weight: bold;
+                        background-color: rgb(255, 196, 0);
+                    }
+                    
+                    td,
+                    th {
+                        padding: 6px;
+                        border: 1px solid #ccc;
+                        text-align: left;
+                    }
+                    
+                    t .ext1 {
+                        background-color: #06F;
+                    }
+                    
+                    .ext2 {
+                        background-color: #0FF;
+                    }
+                    
+                    .ext3 {
+                        background-color: #0FC;
+                    }
+                    
+                    .ext4 {
+                        background-color: rgb(0, 255, 55);
+                    }
+                    
+                    .ext5 {
+                        background-color: rgb(145, 255, 0);
+                    }
+                    
+                    h1 {
+                        font-size: 30px;
+                        font-weight: lighter;
+                    }
+                    
+                    body {
+                        max-width: 50%;
+                        margin: auto;
+                        padding: 230px;
+                    }
+                    
+                    @media only screen and (max-width: 520px) {
+                        table {
+                            width: 100%;
+                        }
+                    }
